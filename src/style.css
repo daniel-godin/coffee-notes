@@ -1,5 +1,15 @@
 :root {
+    --light-color-background: rgba(245, 230, 211, 1);
+    --light-color-text: rgba(74, 55, 40, 1);
+    --light-color-primary: rgba(139, 90, 43, 1);
+    --light-color-secondary:  rgba(193, 120, 23, 1);
+    --light-color-accent: rgba(212, 167, 106, 1);
 
+    --dark-color-background: rgba(44, 33, 23, 1);
+    --dark-color-text: rgba(230, 209, 184, 1);
+    --dark-color-primary: rgba(183, 132, 86, 1);
+    --dark-color-secondary: rgba(139, 90, 43, 1);
+    --dark-color-accent: rgba(212, 167, 106, 1);
 }
 
 * {
@@ -15,9 +25,92 @@ html, body {
     width: 100%;
 }
 
+body {
+    background-color: var(--light-color-background);
+}
+
+main {
+    margin: 0;
+    padding: 2rem;
+}
+
 #root {
     margin: 0;
-    padding: 20px;
+    padding: 0px;
     height: 100%;
     width: 100%;
+}
+
+#navTopBar {
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+
+    background-color: var(--light-color-primary);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navTopBar > a {
+    text-decoration: none;
+    color: var(--light-color-accent);
+    transition: transform 0.3s ease-in-out;
+}
+
+#navTopBar > a:hover {
+    transform: scale(1.1);
+}
+
+#authPageContainer {
+    margin: 0;
+    padding: 0;
+
+    
+
+    display: grid;
+    place-items: center;
+    place-content: center;
+
+}
+
+#formContainer {
+    margin: 0;
+    padding: 10px;
+
+    width: 500px;
+}
+
+.form-default {
+    margin: 0;
+    padding: 10px;
+
+    border: 1px solid var(--light-color-secondary);
+    border-radius: 10px;
+}
+
+#createCoffeeNotePageContainer {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+}
+
+#createCoffeeNoteForm {
+    margin: 0;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+textarea {
+    width: 100%;
+    max-width: 100%;
 }

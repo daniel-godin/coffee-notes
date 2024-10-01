@@ -1,7 +1,7 @@
 :root {
     --light-color-background: rgba(245, 230, 211, 1);
     --light-color-text: rgba(74, 55, 40, 1);
-    --light-color-primary: rgba(139, 90, 43, 1);
+    --light-color-primary: rgb(139, 90, 43, 1);
     --light-color-secondary:  rgba(193, 120, 23, 1);
     --light-color-accent: rgba(212, 167, 106, 1);
 
@@ -113,4 +113,29 @@ main {
 textarea {
     width: 100%;
     max-width: 100%;
+}
+
+#notesContainer {
+    margin: 0;
+    padding: 10px;
+
+
+    display: grid;
+    grid-auto-flow: column;
+
+}
+
+.note-containers {
+    margin: 0;
+    padding: 10px;
+
+    width: 150px;
+
+    /* background-color: var(--light-color-primary); */
+
+    border: 1px solid var(--light-color-accent);
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
 }
